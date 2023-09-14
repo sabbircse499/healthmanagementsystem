@@ -6,13 +6,13 @@ public:
     string name;
     string email;
     string phone;
-registar(){
+registar(){//constructor
 name="billal";
 email="billal4720@gmail.com";
 phone="+8801xxxxxxx";
 
 }
-~registar(){
+~registar(){//destructor
  cout<<"\n\n\n---------destructor data---------\n\n\n"<<endl;
     cout<<"name :"<<name<<endl;
      cout<<"email :"<<email<<endl;
@@ -36,7 +36,7 @@ cout<<"\n\n\n---------general registration---------\n\n\n"<<endl;
     }
 };
 
-class donorregistration:public registar{   //inheritance
+class donorregistration:public registar{   //inheritance single
 public:
 string address;
 string bloodgroup;
@@ -45,7 +45,7 @@ string dateofbirth;
 string bdb; //blood donate before
 
 
-  void inputdata(){  //overridding
+  void inputdata(){  //overridding _polymorphysm
 
       cout<<"\n\n\n---------Donor registration---------\n\n\n"<<endl;
     cout<<"name :";
@@ -65,7 +65,7 @@ string bdb; //blood donate before
     cout<<"have ever donated blood before : ";
     cin>>bdb;
     }
-void printregidata(){//over ridding
+void printregidata(){//over ridding _ polymorphism 
      cout<<"\n\n\n-----donor registration info---------\n\n\n";
      cout<<"name :"<<name<<endl;
      cout<<"email :"<<email<<endl;
@@ -80,6 +80,7 @@ void printregidata(){//over ridding
 };
 // info recipient
 class donorrequest{
+//encapsulation 
 private:
  string ppblm; //patient problem
 
@@ -209,7 +210,7 @@ double calculateBMI(double weight, double height) {
 //Separation of Interface and Implementation
 class devinfo{
 public:
-	virtual void dev ()=0;
+	virtual void dev ()=0;//interface
 	virtual void boss()=0;
 };
 class detail:public devinfo{
@@ -289,7 +290,7 @@ public:
 
 
 };
-class doclist:public dhaka,public thakurgaon{
+class doclist:public dhaka,public thakurgaon{//multiple inheritance 
 public:
     void dc(){
     cout<<"<--------medicine doctor list------->"<<endl;
@@ -352,6 +353,7 @@ cin>>number ;
 
 switch(number){
 case 1:
+	//abstraction 
 gregi.inputdata();
     break;
 
